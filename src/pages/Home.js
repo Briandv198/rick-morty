@@ -1,5 +1,4 @@
 import getData from "../utils/getData";
-import Character from "./Character";
 
 const Home = async () => {
   const characters = await getData();

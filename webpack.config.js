@@ -4,6 +4,8 @@
 const path = require("path");
 //Sirve para trabajar con webpack
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+//Plugin para los estilos
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   //Esta es la dirección de entrada de nuestro proyecto
@@ -28,12 +30,18 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebPackPlugin(
-      {
-        inject: true,
-        template: "./public/index.html",
-        filename: "./index.html",
-      },
-    ),
+    new HtmlWebPackPlugin({
+      inject: true,
+      template: "./public/index.html",
+      filename: "./index.html",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "./src/styles/style.css",
+          to: "",
+        },
+      ],
+    }),
   ],
 };
