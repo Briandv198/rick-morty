@@ -51,10 +51,12 @@ module.exports = {
           from: path.resolve(__dirname, "src", "assets"),
           to: "assets",
         },
+        {
+          from: './src/styles/main.css',
+          to: './src/styles/main.css'
+        }
       ],
     }),
-    new MiniCssExtractPlugin({
-      filename: "assets/[name].[contenthash].css",
-    }),
+    new MiniCssExtractPlugin(),
   ],
 };
