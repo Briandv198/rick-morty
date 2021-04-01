@@ -18,7 +18,7 @@ a {
   text-decoration: none;
 }
 header {
-  background-image: url("../assets/Header.jpg");
+  background-image: url("../../assets/Header.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
