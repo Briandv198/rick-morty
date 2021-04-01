@@ -6,6 +6,8 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 //Plugin para los estilos
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+//Para trabajar con css
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   //Esta es la dirección de entrada de nuestro proyecto
@@ -29,8 +31,12 @@ module.exports = {
       },
       {
         test: /\.png/,
-        type: 'asset/resource',
-      }
+        type: "asset/resource",
+      },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
     ],
   },
   plugins: [
@@ -42,10 +48,13 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: "./src/styles/style.css",
-          to: "",
+          from: path.resolve(__dirname, "src", "assets"),
+          to: "assets",
         },
       ],
+    }),
+    new MiniCssExtractPlugin({
+      filename: "assets/[name].[contenthash].css",
     }),
   ],
 };
