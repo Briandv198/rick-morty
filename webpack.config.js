@@ -28,12 +28,12 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebPackPlugin([
+    new HtmlWebPackPlugin(
       {
         inject: true,
         template: "./public/index.html",
         filename: "./index.html",
       },
-    ]),
+    ),
   ],
 };
