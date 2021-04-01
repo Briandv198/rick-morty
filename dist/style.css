@@ -1,0 +1,23 @@
+/*
+1. Posicionamiento
+2. Modelo de caja (Box model)
+3. Tipografia
+4. Visuales
+5. Otros
+*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+* {
+    /*Se resetean los valores del navegador*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    /*Esto es para utilizar rem*/
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+header {
+    background-image: url('../assets/27333-rick-y-morty.jpg');
+}
