@@ -2,6 +2,8 @@
 
 _Pagina que muestra la información de Rick and Morty obtenida de la API gratuita; https://rickandmortyapi.com/_
 
+_Para ver el proyecto [aqui](https://60cd4661139a0a00083c07e8--inspiring-jepsen-0e83c5.netlify.app/)_
+
 ## Comenzando 🚀
 
 _Parar descargar el proyecto hay que hacer un git clone de https://github.com/Briandv198/rick-morty.git_
