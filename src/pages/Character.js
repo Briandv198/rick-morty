@@ -1,5 +1,5 @@
-import getHash from '../utils/getHash';
-import getData from '../utils/getData';
+import getHash from "../utils/getHash";
+import getData from "../utils/getData";
 
 const Character = async () => {
   const id = getHash();
@@ -8,7 +8,9 @@ const Character = async () => {
   const view = `
         <div class="character-inner">
             <article class="character-cards">
-                <img src="${character.image}" alt="${character.name}">
+                <div class="image">
+                    <img src="${character.image}" alt="${character.name}">
+                </div>
                 <h2>${character.name}</h2>
             </article>
             <article class="character-info">
